@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Games List{% endblock %}
+
+{% block header %}Video Games List{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for game in games %}
+            <li>{{ game.title }} by {{ game.developer.name }}</li>
+        {% endfor %}
+    </ul>
+    <nav>
+        <a href="{% url 'home' %}">Back to Home</a>
+    </nav>
+{% endblock %}

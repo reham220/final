@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}Welcome to the Video Game Library{% endblock %}
+
+{% block content %}
+    <nav>
+        <a href="{% url 'list_games' %}">View Games</a>
+    </nav>
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="{% static 'images/home_image.jpg' %}" alt="Home Image" style="width: 50%; border-radius: 10px;">
+    </div>
+{% endblock %}
